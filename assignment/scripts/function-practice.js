@@ -6,11 +6,12 @@ console.log('***** Function Practice *****')
 
 // 1. Function to return 'Hello World!'
 function hello() {
+  console.log( `Hello World!` );
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
-console.log( hello() );
+// console.log('Test - should say "Hello World!"', hello());
+hello();
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
