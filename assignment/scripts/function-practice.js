@@ -17,7 +17,7 @@ hello();
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  console.log( `inside hello lookp` );
+  console.log( `inside helloName lookp` );
   return `Hello`,name;
 }
 // Remember to call the function to test
@@ -27,8 +27,13 @@ helloName(`Jason`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber ) {
+  console.log( `inside of addNumbers` );
+  let answer = 3 + 4;
+  return answer;
   // return firstNumber + secondNumber;
 }
+
+console.log( `adding number 3 + 4 =`, addNumbers( 3,4 ) );
 
 
 // 4. Function to multiply three numbers & return the result
