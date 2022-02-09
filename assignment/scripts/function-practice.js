@@ -73,9 +73,16 @@ console.log( `isPositive -5`,isPositive(-5) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
+let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
+let lastCharacter = videoGameChar[videoGameChar.length - 1];
 
+function lastItem( lastCharacter ){
+  console.log(`The last character in the array is the`, lastCharacter );
+  return lastCharacter;
 }
+
+lastItem(lastCharacter);
+console.log( `The last character in the list is:`, lastItem(lastCharacter) );
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
