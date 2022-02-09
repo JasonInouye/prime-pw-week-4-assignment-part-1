@@ -26,7 +26,7 @@ helloName(`Jason`);
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( number ) {
   console.log( `inside of addNumbers` );
   let answer = 3 + 4;
   return answer;
@@ -37,7 +37,7 @@ console.log( `adding number 3 + 4 =`, addNumbers( 3,4 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( firstNumber ) {
+function multiplyThree( number ) {
   console.log( `inside of multiplyThree` );
   let answer = 3*4*5;
   return answer;
@@ -51,15 +51,24 @@ console.log( `Multiplying 3 x 4 x 5 =`, multiplyThree( 3,4,5 ) );
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return `True, number is positive`;
+  } // greater than 0
+  else {
+    return `False, number is negative or 0`;
+  } // otherwise false
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+// console.log( 'isPositive - should say true', isPositive(-5) );
+// console.log( 'isPositive - should say false', isPositive(0) );
+// console.log( 'isPositive - should say false', isPositive(-3) );
+
+isPositive(5);
+isPositive(0);
+isPositive(-5);
+console.log( `isPositive 5`,isPositive(5) );
+console.log( `isPositive 0`,isPositive(0) );
+console.log( `isPositive -5`,isPositive(-5) );
 
 
 // 6. Function to return the _last_ item in an array. If the
