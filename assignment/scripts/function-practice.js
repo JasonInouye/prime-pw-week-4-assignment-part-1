@@ -17,9 +17,12 @@ hello();
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  console.log( `inside hello lookp` );
+  return `Hello`,name;
 }
 // Remember to call the function to test
+console.log( `Hello`, helloName( `Jason` ) );
+helloName(`Jason`);
 
 
 // 3. Function to add two numbers together & return the result
