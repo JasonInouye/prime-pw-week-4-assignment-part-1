@@ -37,9 +37,14 @@ console.log( `adding number 3 + 4 =`, addNumbers( 3,4 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber ) {
+  console.log( `inside of multiplyThree` );
+  let answer = 3*4*5;
+  return answer;
+  // return firstNumber + secondNumber;
 }
+
+console.log( `Multiplying 3 x 4 x 5 =`, multiplyThree( 3,4,5 ) );
 
 
 // 5. Function that will return true if a number is positive,
