@@ -37,14 +37,15 @@ console.log( `console log test adding number 3 + 4 =`, addNumbers( 3,4 ) );
 addNumbers( 3,4 );
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( number ) {
+function multiplyThree( num0,num1,num2 ) {
   console.log( `inside of multiplyThree` );
-  let answer = 3*4*5;
-  return answer;
+  let answer = num0 * num1 * num2;
+  return `${num0}*${num1}*${num2}=${answer}`;
   // return firstNumber + secondNumber;
 }
 
-console.log( `Multiplying 3 x 4 x 5 =`, multiplyThree( 3,4,5 ) );
+console.log( `console log test multiplying 3 x 4 x 5 =`, multiplyThree( 3,4,5 ) );
+multiplyThree( 3,4,5 );
 
 
 // 5. Function that will return true if a number is positive,
@@ -63,12 +64,13 @@ function isPositive( number ) {
 // console.log( 'isPositive - should say false', isPositive(0) );
 // console.log( 'isPositive - should say false', isPositive(-3) );
 
+console.log( `console log test isPositive 5`,isPositive(5) );
+console.log( `console log test isPositive 0`,isPositive(0) );
+console.log( `console log test isPositive -5`,isPositive(-5) );
 isPositive(5);
 isPositive(0);
 isPositive(-5);
-console.log( `isPositive 5`,isPositive(5) );
-console.log( `isPositive 0`,isPositive(0) );
-console.log( `isPositive -5`,isPositive(-5) );
+
 
 
 // 6. Function to return the _last_ item in an array. If the
@@ -82,7 +84,9 @@ function lastItem( lastCharacter ){
 }
 
 lastItem(lastCharacter);
-console.log( `The last character in the list is:`, lastItem(lastCharacter) );
+lastItem(); // will result in Undefined
+console.log( `console log test the last character in the list is:`, lastItem(lastCharacter) );
+console.log( `console log test UNDEFINED character in the list is:`, lastItem() );
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
