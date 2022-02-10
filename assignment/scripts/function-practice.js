@@ -75,25 +75,41 @@ isPositive(-5);
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
+let videoGameChar = [ `Sonic` , `Master Chief` , `Crash` , `Link`];
+// let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
 let lastCharacter = videoGameChar[videoGameChar.length - 1];
 
 function lastItem( lastCharacter ){
-  console.log(`The last character in the array is the`, lastCharacter );
-  return lastCharacter;
+  console.log(`inside of lastCharacter`) ;
+  return `The last character in the array is ${lastCharacter}`;
 }
 
 lastItem(lastCharacter);
 lastItem(); // will result in Undefined
-console.log( `console log test the last character in the list is:`, lastItem(lastCharacter) );
-console.log( `console log test UNDEFINED character in the list is:`, lastItem() );
+console.log( `console log test the last character`, lastItem(lastCharacter) );
+console.log( `console log test UNDEFINED character`, lastItem() );
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
 
+const favCharacter = 'Mario'
+
+function favCharacterExist(){
+  console.log( `in favCharacterExist` );
+  for ( let myFav of videoGameChar) {
+    console.log( myFav );
+    if ( myFav === favCharacter ) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
+
+favCharacterExist();
+console.log( `console log test favCharacterExist`, favCharacterExist());
 
 // ----------------------
 // Stretch Goals
