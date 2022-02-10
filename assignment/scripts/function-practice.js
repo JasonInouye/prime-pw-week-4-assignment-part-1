@@ -7,7 +7,7 @@ console.log('***** Function Practice *****')
 // 1. Function to return 'Hello World!'
 function hello() {
   console.log( `Hello World!` );
-  return 'Hello World!';
+  return `Hello World!`;
 }
 // Call the function to test
 // console.log('Test - should say "Hello World!"', hello());
@@ -18,23 +18,23 @@ hello();
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
   console.log( `inside helloName lookp` );
-  return `Hello`,name;
+  return `Hello ${name}!`;
 }
 // Remember to call the function to test
-console.log( `Hello`, helloName( `Jason` ) );
+// console.log( `Hello`, helloName( `Jason` ) );
+console.log( `console log test of helloName:`,helloName(`Jason`));
 helloName(`Jason`);
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( number ) {
+function addNumbers( num0,num1 ) {
   console.log( `inside of addNumbers` );
-  let answer = 3 + 4;
-  return answer;
+  let answer = num0 + num1;
+  return `${num0}+${num1}=${answer}`;
   // return firstNumber + secondNumber;
 }
-
-console.log( `adding number 3 + 4 =`, addNumbers( 3,4 ) );
-
+console.log( `console log test adding number 3 + 4 =`, addNumbers( 3,4 ) );
+addNumbers( 3,4 );
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( number ) {
