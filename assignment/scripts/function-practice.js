@@ -98,7 +98,7 @@ const favCharacter = 'Mario'
 
 function favCharacterExist(){
   console.log( `in favCharacterExist` );
-  for ( let myFav of videoGameChar) {
+  for ( let myFav of videoGameChar ) {
     console.log( myFav );
     if ( myFav === favCharacter ) {
       return true;
@@ -164,13 +164,38 @@ addNumb(7);
 addNumb(21);
 
 sumAll();
-console.log( `console log test sumAll`, sumAll() );
+
 
 
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
+const inputArray=[3,4,-7,8,-6,12,-2];
+let outputArray = [];
+
+function addToOutput( newOutput ){
+  console.log( `in addNumb`, newOutput );
+  outputArray.push( newOutput );
+  return newOutput;
+};
+
+function positiveOnly (){
+  for (let pOnly of inputArray ) {
+    console.log( pOnly );
+    if ( pOnly > 0 ) {
+      console.log( `This is a positive value`, pOnly );
+      addToOutput(pOnly);
+      return `adding ${pOnly} to outputArray`;
+    }
+    else {
+      console.log( `${pOnly} is not a positive value` );
+    }
+  }
+}
+
+positiveOnly();
 
 
 
