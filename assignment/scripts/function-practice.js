@@ -178,16 +178,14 @@ let outputArray = [];
 function addToOutput( newOutput ){
   console.log( `in addNumb`, newOutput );
   outputArray.push( newOutput );
-  return newOutput;
 };
 
 function positiveOnly (){
   for (let pOnly of inputArray ) {
     console.log( pOnly );
     if ( pOnly > 0 ) {
-      console.log( `This is a positive value`, pOnly );
-      addToOutput(pOnly);
-      return `adding ${pOnly} to outputArray`;
+      console.log( `${pOnly} is a positive value` );
+      addToOutput( pOnly );
     }
     else {
       console.log( `${pOnly} is not a positive value` );
@@ -196,6 +194,7 @@ function positiveOnly (){
 }
 
 positiveOnly();
+console.log( 'This is my final array of positive number', outputArray );
 
 
 
