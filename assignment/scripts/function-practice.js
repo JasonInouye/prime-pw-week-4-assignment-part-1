@@ -75,8 +75,9 @@ isPositive(-5);
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-let videoGameChar = [ `Sonic` , `Master Chief` , `Crash` , `Link`];
-// let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
+
+// let videoGameChar = [ `Sonic` , `Master Chief` , `Crash` , `Link`]; False Test
+let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
 let lastCharacter = videoGameChar[videoGameChar.length - 1];
 
 function lastItem( lastCharacter ){
@@ -116,11 +117,26 @@ console.log( `console log test favCharacterExist`, favCharacterExist());
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+let word = `apple`;
+let fletter = word.slice(0,1);
 
+function isFirstLetter(letter, word){
+  console.log( `inside of isFirstLetter` );
+  if ( letter === fletter ) {
+    console.log( `The letter ${letter} equals the first letter of the word ${word}` );
+    return true;
+  }
+  else {
+    console.log( `The letter ${letter} DOES NOT equals the first letter of the word ${word}` );
+    return false;
+  }
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+
+isFirstLetter(`a`, `apple`);
+isFirstLetter(`z`, `apple`);
+console.log( `console log test first letter true`, isFirstLetter('a', 'apple') );
+console.log( 'console log test first letter false', isFirstLetter('z', 'apple') );
+
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
