@@ -139,11 +139,34 @@ console.log( 'console log test first letter false', isFirstLetter('z', 'apple') 
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
-  // TODO: loop to add items
-  return sum;
+let totalNumber = [];
+
+// TODO: loop to add items
+function addNumb( newNumb ){
+  console.log( `in addNumb`, newNumb );
+  totalNumber.push( newNumb );
+  return newNumb;
+};
+
+function sumAll(){
+  let sum = 0;
+  for (var i = 0; i < totalNumber.length; i++) {
+    console.log( `for loop of totalNumber`, totalNumber[ i ]);
+    sum += totalNumber[ i ];
+  }
+  console.log( `The sum is`, sum );
 }
+
+addNumb(1);
+addNumb(4);
+addNumb(8);
+addNumb(7);
+addNumb(21);
+
+sumAll();
+console.log( `console log test sumAll`, sumAll() );
+
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
