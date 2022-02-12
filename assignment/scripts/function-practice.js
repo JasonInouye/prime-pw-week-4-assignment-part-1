@@ -201,3 +201,34 @@ console.log( 'This is my final array of positive number', outputArray );
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// create a funciton that adds number to an array
+// then create a function that takes  an array of numbers and return both the minimum and maximum numbers, in that order.
+
+let numberArray=[];
+
+function add( addNumb ){
+  console.log( `in add`, addNumb );
+  numberArray.push( addNumb );
+  return addNumb;
+};
+
+function minMax(){
+  let minNumb = Math.min.apply( Math, numberArray );
+  let maxNumb = Math.max.apply( Math, numberArray );
+  console.log( `The minimum number in the array is ${minNumb}` );
+  console.log( `The maximum number in the array is ${maxNumb}` );
+  //let myanswer = [ minNumb, maxNumb ];
+  //console.log( `The value for myanswer`, myanswer );
+  //return `${myanswer}`;
+  return [ minNumb, maxNumb ];
+}
+
+add(2);
+add(5);
+add(8);
+add(10);
+add(12);
+add(-5);
+
+minMax();
