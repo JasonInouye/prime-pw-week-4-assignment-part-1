@@ -76,51 +76,68 @@ isPositive(-5);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
-// let videoGameChar = [ `Sonic` , `Master Chief` , `Crash` , `Link`]; False Test
-let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash` , `Link`];
-let lastCharacter = videoGameChar[videoGameChar.length - 1];
+let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link' ];
+// let videoGameChar = [ ];  //Undefined test
 
-function lastItem( lastCharacter ){
+// let lastCharacter = videoGameChar[videoGameChar.length - 1];
+
+// feed array instead of lastCharacter variable
+function lastItem( videoGameChar ){
+  let lastCharacter = videoGameChar[videoGameChar.length - 1];
   console.log(`inside of lastCharacter`) ;
   return `The last character in the array is ${lastCharacter}`;
 }
 
-lastItem(lastCharacter);
-lastItem(); // will result in Undefined
-console.log( `console log test the last character`, lastItem(lastCharacter) );
-console.log( `console log test UNDEFINED character`, lastItem() );
+lastItem( videoGameChar );
+console.log( `console log test lastItem function`, lastItem( videoGameChar ) );
+
+
+
+//lastItem(); // will result in Undefined
+//console.log( `console log test the last character`, lastItem(lastCharacter) );
+//console.log( `console log test UNDEFINED character`, lastItem() );
+
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
-const favCharacter = 'Mario'
 
-function favCharacterExist(){
-  console.log( `in favCharacterExist` );
-  for ( let myFav of videoGameChar ) {
-    console.log( myFav );
-    if ( myFav === favCharacter ) {
-      return true;
+
+function favCharacterExist(locateChar){
+  let exists = 0;
+  console.log( `in jason favCharacterExist` );
+  for ( let i=0; i<videoGameChar.length; i++ ) {
+    if ( locateChar === videoGameChar[i] ) {
+      console.log( 'True', videoGameChar[i] );
+      exists += 1;
     }
     else {
-      return false;
+      console.log( 'False', videoGameChar[i] );
     }
+  } // End Loop
+  if ( exists > 0 ) {
+    return true;
   }
-}
+  else {
+    return false;
+  }
+} // END favCharacterExist
 
-favCharacterExist();
-console.log( `console log test favCharacterExist`, favCharacterExist());
+favCharacterExist( `Peach` ); // False Test
+favCharacterExist( `Mario` ); // True Test
+console.log( `console log test favCharacterExist`, favCharacterExist( `Peach` )); // False Test
+console.log( `console log test favCharacterExist`, favCharacterExist( `Mario` )); // True Test
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-let word = `apple`;
-let fletter = word.slice(0,1);
+
 
 function isFirstLetter(letter, word){
+  let fletter = word.slice(0,1);
   console.log( `inside of isFirstLetter` );
   if ( letter === fletter ) {
     console.log( `The letter ${letter} equals the first letter of the word ${word}` );
