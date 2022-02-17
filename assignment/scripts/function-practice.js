@@ -76,20 +76,20 @@ isPositive(-5);
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 
-let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link' ];
+
 // let videoGameChar = [ ];  //Undefined test
 
 // let lastCharacter = videoGameChar[videoGameChar.length - 1];
 
 // feed array instead of lastCharacter variable
-function lastItem(){
-  let lastCharacter = videoGameChar[videoGameChar.length - 1];
+function lastItem( arr ){
+  let lastCharacter = arr[arr.length - 1];
   console.log(`inside of lastCharacter`) ;
   return `The last character in the array is ${lastCharacter}`;
 }
 
-lastItem();
-console.log( `console log test lastItem function`, lastItem() );
+lastItem( [`Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link'] );
+console.log( `console log test lastItem function`, lastItem( [`Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link']) );
 
 
 
@@ -105,23 +105,15 @@ console.log( `console log test lastItem function`, lastItem() );
 
 
 function favCharacterExist(locateChar){
-  let exists = 0;
+  let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link' ];
   console.log( `in jason favCharacterExist` );
   for ( let i=0; i<videoGameChar.length; i++ ) {
     if ( locateChar === videoGameChar[i] ) {
       console.log( 'True', videoGameChar[i] );
-      exists += 1;
+      return true;
     }
-    else {
-      console.log( 'False', videoGameChar[i] );
-    }
-  } // End Loop
-  if ( exists > 0 ) {
-    return true;
   }
-  else {
-    return false;
-  }
+  return false;
 } // END favCharacterExist
 
 favCharacterExist( `Peach` ); // False Test
