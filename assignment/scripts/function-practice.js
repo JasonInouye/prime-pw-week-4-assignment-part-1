@@ -82,14 +82,14 @@ let videoGameChar = [ `Mario` , `Sonic` , `Master Chief` , `Crash`, 'Link' ];
 // let lastCharacter = videoGameChar[videoGameChar.length - 1];
 
 // feed array instead of lastCharacter variable
-function lastItem( videoGameChar ){
+function lastItem(){
   let lastCharacter = videoGameChar[videoGameChar.length - 1];
   console.log(`inside of lastCharacter`) ;
   return `The last character in the array is ${lastCharacter}`;
 }
 
-lastItem( videoGameChar );
-console.log( `console log test lastItem function`, lastItem( videoGameChar ) );
+lastItem();
+console.log( `console log test lastItem function`, lastItem() );
 
 
 
